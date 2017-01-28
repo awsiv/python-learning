@@ -1,12 +1,24 @@
 <!doctype html>
 <html lang="en">
     <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
     </head>
     <body>
-        <div id="map" style="width:100%; height:300px;"></div>
-        <h1>Total number of immigrants</h1>
+          <nav>
+            <a href="http://lateralride.com/">
+                <img src="{{ url_for('static', filename='logo.png') }}">
+            </a>
+          </nav>
+          <header>
+           <h1>Total number of immigrants</h1>
+           <div>
+              By <a href="http://lateralride.com/">Lateral Ride tutorials</a>
+           </div>
+          </header>
+          <div id="map" style="width:100%; height:300px;"></div>
           <table border=1 cellpadding=7>
             <tr>
                 <th>Country</th>
