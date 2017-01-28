@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
+    </head>
+    <body>
+        <div id="map" style="width:100%; height:300px;"></div>
+        <h1>Total number of immigrants</h1>
+          <table border=1 cellpadding=7>
+            <tr>
+                <th>Country</th>
+                <th>Net Immigration</th>
+                <th>Immigration</th>
+                <th>Emigration</th>
+            </tr>
+            
+            <tr>
+                <td> <a href="Norway/">Norway</a></td>
+                <td>-1882</td>
+                <td>8208</td>
+                <td>10090</td>
+            </tr>
+            
+            <tr>
+                <td> <a href="Foreign/">Foreign</a></td>
+                <td>31684</td>
+                <td>59068</td>
+                <td>27384</td>
+            </tr>
+            
+            <tr>
+                <td> <a href="Selected citizenship/">Selected citizenship</a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td> <a href="Syria/">Syria</a></td>
+                <td>3986</td>
+                <td>4010</td>
+                <td>24</td>
+            </tr>
+            
+            <tr>
+                <td> <a href="Poland/">Poland</a></td>
+                <td>4736</td>
+                <td>8182</td>
+                <td>3446</td>
+            </tr>
+            
+            <tr>
+                <td> <a href="Lithuania/">Lithuania</a></td>
+                <td>1412</td>
+                <td>3309</td>
+                <td>1897</td>
+            </tr>
+            
+            <tr>
+                <td> <a href="Sweden/">Sweden</a></td>
+                <td>-23</td>
+                <td>3603</td>
+                <td>3626</td>
+            </tr>
+            
+            <tr>
+                <td> <a href="Latvia/">Latvia</a></td>
+                <td>345</td>
+                <td>844</td>
+                <td>499</td>
+            </tr>
+            
+            <tr>
+                <td> <a href="Eritrea/">Eritrea</a></td>
+                <td>3183</td>
+                <td>3276</td>
+                <td>93</td>
+            </tr>
+            
+            <tr>
+                <td> <a href="Germany/">Germany</a></td>
+                <td>91</td>
+                <td>1311</td>
+                <td>1220</td>
+            </tr>
+            
+            <tr>
+                <td> <a href="Somalia/">Somalia</a></td>
+                <td>1635</td>
+                <td>1884</td>
+                <td>249</td>
+            </tr>
+            
+            <tr>
+                <td> <a href="Afghanistan/">Afghanistan</a></td>
+                <td>1297</td>
+                <td>1381</td>
+                <td>84</td>
+            </tr>
+            
+            <tr>
+                <td> <a href="Philippines/">Philippines</a></td>
+                <td>716</td>
+                <td>2241</td>
+                <td>1525</td>
+            </tr>
+            
+            <tr>
+                <td> <a href="Iceland/">Iceland</a></td>
+                <td>306</td>
+                <td>1002</td>
+                <td>696</td>
+            </tr>
+            
+          </table>
+          <script type="text/javascript">
+            var map = L.map('map').setView([34.055, -118.35], 9);
+            var osmLayer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 18,
+                attribution: 'Data, imagery and map information provided by <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>.'
+            });
+            map.addLayer(osmLayer);
+
+            var data = {
+              "type": "FeatureCollection",
+              "features": [
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Country": "Norway",
+                    "Immigration": "8208"
+                  },
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Country": "Foreign",
+                    "Immigration": "59068"
+                  },
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Country": "Selected citizenship",
+                    "Immigration": ""
+                  },
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Country": "Syria",
+                    "Immigration": "4010"
+                  },
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Country": "Poland",
+                    "Immigration": "8182"
+                  },
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Country": "Lithuania",
+                    "Immigration": "3309"
+                  },
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Country": "Sweden",
+                    "Immigration": "3603"
+                  },
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Country": "Latvia",
+                    "Immigration": "844"
+                  },
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Country": "Eritrea",
+                    "Immigration": "3276"
+                  },
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Country": "Germany",
+                    "Immigration": "1311"
+                  },
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Country": "Somalia",
+                    "Immigration": "1884"
+                  },
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Country": "Afghanistan",
+                    "Immigration": "1381"
+                  },
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Country": "Philippines",
+                    "Immigration": "2241"
+                  },
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Country": "Iceland",
+                    "Immigration": "1002"
+                  },
+                }
+                
+              ]
+            };
+            var dataLayer = L.geoJson(data);
+            map.addLayer(dataLayer);
+        </script>
+    </body>
+</html>
